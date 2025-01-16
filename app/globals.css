@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #00a8ff;
+  --accent: #00ffa3;
+  --background: #0a0a2e;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0a0a2e] text-white;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer components {
+  .hero-title {
+    @apply text-4xl md:text-6xl lg:text-7xl font-bold;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-[#00a8ff] to-[#00ffa3] text-transparent bg-clip-text;
+  }
+
+  .btn-primary {
+    @apply px-8 py-4 bg-gradient-to-r from-[#00a8ff] to-[#00ffa3] rounded-xl font-semibold text-white shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105;
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { 
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up 1s forwards;
+}
+
+.delay-300 { animation-delay: 300ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-1000 { animation-delay: 1000ms; }
+.delay-1200 { animation-delay: 1200ms; }
+.delay-1400 { animation-delay: 1400ms; }
+.delay-1600 { animation-delay: 1600ms; }
+.delay-1800 { animation-delay: 1800ms; }
+
+/* Effet de lueur */
+.glow-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-effect::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, #00a8ff, #00ffa3);
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.glow-effect:hover::before {
+  opacity: 1;
+} 
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(10px, -10px) rotate(5deg); }
+  66% { transform: translate(-5px, 5px) rotate(-5deg); }
+}
+
+.light-fragment {
+  animation-delay: var(--delay);
+  opacity: 0.6;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  filter: blur(15px);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.btn-primary:hover::before {
+  opacity: 0.5;
+}
+
+/* Effet de surbrillance au hover */
+.gradient-text {
+  position: relative;
+  display: inline-block;
+}
+
+.gradient-text::after {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+}
+
+.gradient-text:hover::after {
+  opacity: 0.3;
+} 
+
+/* Ajoutez ces styles spécifiques pour le header */
+.header-gradient {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+}
+
+.header-shape {
+  clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* Animation pour les boutons */
+@keyframes buttonGlow {
+  0%, 100% { box-shadow: 0 5px 15px rgba(76, 175, 80, 0.2); }
+  50% { box-shadow: 0 5px 25px rgba(76, 175, 80, 0.4); }
+}
+
+.button-glow {
+  animation: buttonGlow 2s infinite;
+} 
+
+@keyframes shine {
+  0% { transform: translateX(-100%) skewX(-45deg); }
+  100% { transform: translateX(200%) skewX(-45deg); }
+}
+
+.animate-shine {
+  animation: shine 3s infinite;
+}
+
+/* Effet de profondeur pour les cartes */
+.feature-card-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.feature-card-3d:hover {
+  transform: rotateY(5deg) rotateX(5deg);
+}
+
+/* Animation des particules */
+.particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+    linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+  background-size: 24px 24px;
+} 

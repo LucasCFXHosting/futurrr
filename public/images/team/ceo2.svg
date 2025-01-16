@@ -1,0 +1,19 @@
+<svg width="800" height="1000" viewBox="0 0 800 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond dégradé -->
+  <rect width="800" height="1000" fill="url(#gradientCEO2)"/>
+  
+  <!-- Silhouette stylisée -->
+  <path d="M300 200 Q400 150 500 200 L500 400 Q400 450 300 400 Z" fill="white" opacity="0.9"/>
+  <circle cx="400" cy="150" r="80" fill="white" opacity="0.9"/>
+  
+  <!-- Éléments graphiques -->
+  <rect x="200" y="500" width="400" height="400" rx="200" fill="white" opacity="0.7"/>
+  
+  <!-- Dégradé -->
+  <defs>
+    <linearGradient id="gradientCEO2" x1="0" y1="0" x2="800" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffd700"/>
+      <stop offset="100%" stop-color="#ffd700" opacity="0.7"/>
+    </linearGradient>
+  </defs>
+</svg> 

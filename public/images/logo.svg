@@ -1,0 +1,34 @@
+<svg width="300" height="80" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hexagone plus grand -->
+  <path d="M45 10L65 22V46L45 58L25 46V22L45 10Z" 
+    fill="url(#hexGradient)" 
+    stroke="#ffd700" 
+    stroke-width="3"
+  />
+  
+  <!-- Lignes futuristes dans l'hexagone -->
+  <path d="M35 30L55 38M35 38L55 30" 
+    stroke="#fff" 
+    stroke-width="2"
+    stroke-linecap="round"
+  />
+
+  <!-- Texte plus grand -->
+  <text x="85" y="48" 
+    font-family="'Space Grotesk', sans-serif" 
+    font-size="40" 
+    font-weight="700" 
+    letter-spacing="0.05em"
+  >
+    <tspan fill="#333">Futur</tspan>
+    <tspan fill="#ffd700">Line</tspan>
+  </text>
+
+  <!-- Dégradé pour l'hexagone -->
+  <defs>
+    <linearGradient id="hexGradient" x1="25" y1="10" x2="65" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffd700"/>
+      <stop offset="100%" stop-color="#ffa500"/>
+    </linearGradient>
+  </defs>
+</svg> 

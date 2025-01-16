@@ -18,9 +18,9 @@ const teamMembers = [
     name: "BARBAT Loris",
     role: "CEO & Directeur Marketing",
     photo: "/images/team/marie.png",
-    description: "Passionnée de design et d'expérience utilisateur, Marie apporte sa vision créative à chaque projet.",
-    skills: ["Design UI/UX", "Direction Artistique", "Stratégie"],
-    linkedin: "https://linkedin.com/in/marie-laurent"
+    description: "Passionnée de design et d'expérience utilisateur, Loris apporte sa vision créative à chaque projet.",
+    skills: ["Design UI/UX", "Marketing", "Stratégie"],
+    linkedin: "https://www.linkedin.com/in/loris-barbat-611433347?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
   }
 ]
 
